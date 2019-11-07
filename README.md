@@ -6,6 +6,7 @@
 - Docker
 - PHP 7.3
 - Zend expressive
+- Eloquent ORM
 
 ## Getting Started
 
