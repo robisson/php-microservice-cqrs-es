@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  server:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ../:/var/www/html
+    container_name: ms
+    image: microservice-cqrs-es
+    ports:
+      - "80:80"
+      - "443:443"
+    working_dir: /var/www/html
+    command: 'composer serve'

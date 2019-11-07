@@ -1,0 +1,20 @@
+docker rm -f ddd; docker run  -it --name ddd -v $(pwd)/:/var/www/html -p 8080:80 debian
+apt update
+apt upgrade -y
+uname -a
+apt -y install lsb-release apt-transport-https ca-certificates vim
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+apt install wget -y
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php7.3.list
+apt update
+apt -y install php7.3 
+apt install -y php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.3-zip php7.3-gd  php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath php7.3-json :
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PH
+P_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');" && mv composer.phar /usr/local/bin/composer
+
+  
+ 
