@@ -1,6 +1,6 @@
 # A Microservice boilerplate using CQRS + Event Sourcing
 [![Build Status](https://travis-ci.org/robisson/php-microservice-cqrs-es.svg?branch=master)](https://travis-ci.org/robisson/php-microservice-cqrs-es)
-
+[![Coverage Status](https://coveralls.io/repos/github/robisson/php-microservice-cqrs-es/badge.svg?branch=master)](https://coveralls.io/github/robisson/php-microservice-cqrs-es?branch=master)
 
 **Built with:**
 - Docker
