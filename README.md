@@ -1,5 +1,5 @@
 # A Microservice boilerplate using CQRS + Event Sourcing
-
+[![Build Status](https://travis-ci.org/robisson/php-microservice-cqrs-es.svg?branch=master)](https://travis-ci.org/robisson/php-microservice-cqrs-es)
 
 
 **Built with:**
