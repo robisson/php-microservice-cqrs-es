@@ -12,7 +12,7 @@ class PDOEventStore extends EloquentModel implements EventStoreInterface
     protected $table = 'events';
 
     protected $primaryKey = 'id';
-    
+
     /**
      * @param DomainEvents $events
      * @return void

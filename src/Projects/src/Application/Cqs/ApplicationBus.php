@@ -41,7 +41,7 @@ class ApplicationBus implements BusInterface
         $commandClassName = get_class($command);
         $partsClassName = explode('\\', $commandClassName);
         $onlyCommandClassName = $partsClassName[count($partsClassName)-1];
-        
+
         $commandHandlerClassName = stristr($onlyCommandClassName, 'Command') == 'Command' ?
           str_replace('Command', 'Handler', $onlyCommandClassName) :
           str_replace('Query', 'Handler', $onlyCommandClassName);
@@ -53,13 +53,13 @@ class ApplicationBus implements BusInterface
     private function execute($class)
     {
         $handlerClass = $this->getHandlerClassName($class);
-        
+
         if (!class_exists($handlerClass)) {
             throw new HandlerNotFoundException(get_class($class));
         }
 
         $handler = $this->container->get($handlerClass);
-        
+
         return $handler->handle($class);
     }
 }

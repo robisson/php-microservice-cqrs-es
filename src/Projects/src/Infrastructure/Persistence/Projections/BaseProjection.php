@@ -23,7 +23,7 @@ abstract class BaseProjection extends PersistenceManager implements ProjectionIn
     {
         $lasWordOfMethod = explode('.', str_replace('\\', '.', get_class($event)));
         $lasWordOfMethod = end($lasWordOfMethod);
-        
+
         return lcfirst($lasWordOfMethod);
     }
 }

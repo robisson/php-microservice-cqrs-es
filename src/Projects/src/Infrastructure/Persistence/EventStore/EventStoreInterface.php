@@ -4,7 +4,7 @@ namespace Projects\Infrastructure\Persistence\EventStore;
 
 use Projects\Domain\Events\DomainEvents;
 
-interface EventStoreInterface  
+interface EventStoreInterface
 {
     /**
      * @param DomainEvents $events

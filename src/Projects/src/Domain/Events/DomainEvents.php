@@ -16,7 +16,7 @@ class DomainEvents extends ImmutableArray
      */
     protected function guardType($item)
     {
-        if(!($item instanceof DomainEventInterface)) {
+        if (!($item instanceof DomainEventInterface)) {
             throw new \TypeError('A DomainEvent muest be a DomainEventInterface istanceof');
         }
     }

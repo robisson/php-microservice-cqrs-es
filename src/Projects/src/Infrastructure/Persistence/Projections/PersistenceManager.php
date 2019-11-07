@@ -8,5 +8,4 @@ use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 abstract class PersistenceManager extends EloquentModel
 {
-    
 }

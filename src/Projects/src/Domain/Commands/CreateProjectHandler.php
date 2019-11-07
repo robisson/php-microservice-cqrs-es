@@ -27,7 +27,7 @@ class CreateProjectHandler implements CommandHandlerInterface
         }
 
         $newProject = Project::create($projectName);
-        
+
         $this->repository->createProject($newProject);
     }
 }

@@ -71,7 +71,7 @@
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
         "serve": "php -S 0.0.0.0:80 -t public/",
-        "test": "phpunit --colors=always --debug",
+        "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-html coverage",
         "docs": "openapi --format yaml ./src/ -o docs/"
     }

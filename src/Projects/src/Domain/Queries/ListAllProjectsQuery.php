@@ -8,5 +8,4 @@ use Projects\Application\Cqs\QueryInterface;
 
 class ListAllProjectsQuery implements QueryInterface
 {
-    
 }

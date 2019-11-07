@@ -12,7 +12,7 @@ use Projects\Domain\Events\DomainEvents;
 abstract class DomainModelEvent implements RecordsEventsInterface
 {
     protected $recordedEvents = [];
-    
+
     protected function recordThat(DomainEventInterface $aDomainEvent)
     {
         $this->recordedEvents[] = $aDomainEvent;
