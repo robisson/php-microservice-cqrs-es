@@ -8,5 +8,5 @@ script:
   - composer check
   - composer test
 after_success:
-  - composer test-coverage
+  - composer test-coverage-clover
   - travis_retry php vendor/bin/php-coveralls -v

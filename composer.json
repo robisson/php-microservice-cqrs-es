@@ -74,6 +74,7 @@
         "serve": "php -S 0.0.0.0:80 -t public/",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-html coverage",
+        "test-coverage-clover": "phpunit --coverage-clover build/logs/clover.xml",
         "docs": "openapi --format yaml ./src/ -o docs/"
     }
 }
