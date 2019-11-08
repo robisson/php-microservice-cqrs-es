@@ -9,10 +9,11 @@ This is a very simple example application with two endpoints, where it is simula
 - PHP 7.3
 - Zend expressive
 - Eloquent ORM
+- Swagger-PHP
 
 ## Getting Started
 
-Start your new Expressive project with composer:
+Start your project with composer:
 
 ```bash
 $ cd docker
@@ -25,6 +26,17 @@ After build image and run container with docker composer
 $ composer install
 $ composer run --timeout=0 serve
 ```
+
+## Tasks defined in composer
+
+- `composer install` - Install all dependencies of the project
+- `composer check` - Run the task that to validate PSR-2 and tests
+- `composer cs-check` - Validate the PSR-2 code indent
+- `composer fix` - Fix code indent to the PSR-2
+- `composer serve` - Run built-in server
+- `composer test` - Run tests
+- `composer test-coverage` - Run the code coverage report
+- `composer docs` - Generate api documention based on OpenAPI with Swagger-PHP
 
 ## Workflow application
 <img src="cqrs-event-source.png"
