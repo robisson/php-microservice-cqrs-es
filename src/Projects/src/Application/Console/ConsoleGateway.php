@@ -26,7 +26,7 @@ class ConsoleGateway extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $className = $input->getArgument('class');
-        
+
         if (!class_exists($className)) {
             throw new \InvalidArgumentException("The class does not exists");
         }
