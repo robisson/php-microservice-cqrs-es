@@ -35,11 +35,11 @@ use Zend\Expressive\MiddlewareFactory;
 return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
     /**
      * @OA\Get(
-     *   path="/products",
-     *   summary="list products",
+     *   path="/projects",
+     *   summary="list projects",
      *   @OA\Response(
      *     response=200,
-     *     description="A list with products"
+     *     description="A list with all projects"
      *   ),
      *   @OA\Response(
      *     response="default",
