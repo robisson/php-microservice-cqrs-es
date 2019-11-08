@@ -2,6 +2,9 @@
 
 require '../vendor/autoload.php';
 
+$dotenv = Dotenv\Dotenv::create('../config');
+$dotenv->load();
+
 use Symfony\Component\Console\Application;
 
 /** @var \Interop\Container\ContainerInterface $container */
