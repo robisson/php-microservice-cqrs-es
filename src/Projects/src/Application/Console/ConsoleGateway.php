@@ -28,7 +28,7 @@ class ConsoleGateway extends Command
         $className = $input->getArgument('class');
 
         if (!class_exists($className)) {
-            throw new \InvalidArgumentException("The class does not exists");
+            throw new \InvalidArgumentException("The class $className does not exists");
         }
 
         (new $className($input))->execute($input);
