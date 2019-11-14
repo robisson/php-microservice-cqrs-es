@@ -6,7 +6,7 @@ namespace ProjectsTest\Handler;
 
 use PHPUnit\Framework\TestCase;
 use Projects\Domain\Queries\ListAllProjectsHandler;
-use Projects\Domain\Repositories\ProjectViewRepositoryInterface;
+use Projects\Infrastructure\Persistence\Repositories\ProjectViewRepository;
 use Projects\Domain\Queries\ListAllProjectsQuery;
 
 class ListAllProjectsHandlerTest extends TestCase
@@ -14,17 +14,12 @@ class ListAllProjectsHandlerTest extends TestCase
     public function testShoudToCreateQueryAndReturnAProjectsArray()
     {
         $fakeProject = ['fakeProject'];
+        
+        $projectViewRepositoryInterface = \Mockery::mock(ProjectViewRepository::class);
+        $projectViewRepositoryInterface->shouldReceive('all')->andReturn($fakeProject);
 
-        $repository = $this->prophesize(ProjectViewRepositoryInterface::class);
-
-        $repository->getAll()->willReturn($fakeProject)
-          ->shouldBeCalledTimes(1);
-          
-        $queryHandler = new ListAllProjectsHandler($repository->reveal());
-
-        $this->assertEquals(
-            $fakeProject,
-            $queryHandler->handle(new ListAllProjectsQuery())
-        );
+        $listAllProjectsHandler = new ListAllProjectsHandler($projectViewRepositoryInterface);
+              
+        $this->assertEquals($fakeProject, $listAllProjectsHandler->handle());
     }
 }

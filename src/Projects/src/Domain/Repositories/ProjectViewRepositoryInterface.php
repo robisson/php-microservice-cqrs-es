@@ -6,5 +6,5 @@ namespace Projects\Domain\Repositories;
 
 interface ProjectViewRepositoryInterface
 {
-    public function getAll();
+    public static function all();
 }

@@ -19,6 +19,6 @@ class ListAllProjectsHandler implements QueryHandlerInterface
 
     public function handle(QueryInterface $query = null)
     {
-        return $this->repository->getAll();
+        return $this->repository->all();
     }
 }
