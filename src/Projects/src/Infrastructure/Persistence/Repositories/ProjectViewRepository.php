@@ -12,9 +12,4 @@ class ProjectViewRepository extends EloquentModel implements ProjectViewReposito
     protected $table = 'projects';
 
     protected $primaryKey = 'id';
-
-    public function getAll()
-    {
-        return $this->all();
-    }
 }
