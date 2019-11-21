@@ -25,4 +25,16 @@ class ProjectProjectionTest extends TestCase
 
         $this->assertNull($projetProjection->projectWasCreated($ProjectWasCreated));
     }
+
+    public function testShouldCallProjectMethodAndReturnNull()
+    {
+        $projetProjection = $this->createMock(ProjectProjection::class);
+
+        $projetProjection->method('save')
+                      ->willReturn(null);
+
+        $ProjectWasCreated = new ProjectWasCreated(new \DateTimeImmutable(), 'name');
+
+        $this->assertNull($projetProjection->project(new DomainEvents([$ProjectWasCreated])));
+    }
 }
